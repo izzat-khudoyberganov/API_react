@@ -1,10 +1,16 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App.jsx";
+import MainThemeContext from "./context/Theme.jsx";
+import "./index.css";
+import MainLangContextProvider from "./context/Lang.jsx";
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App />
+    <MainLangContextProvider>
+      <MainThemeContext>
+        <App />
+      </MainThemeContext>
+    </MainLangContextProvider>
   </StrictMode>,
-)
+);
