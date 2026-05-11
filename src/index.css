@@ -1,3 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, sans-serif;
+}
+
 .mt-5 {
     margin-top: 50px;
     display: flex;
@@ -13,7 +20,47 @@
 }
 
 .grid {
-    display: grid; 
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
+}
+
+.content {
+    max-width: 500px;
+    width: 100%;
+    background-color: blanchedalmond;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px;
+}
+
+.user__img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.user__title {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.user__tel,
+.user__email {
+    color: darkgrey;
+    font-size: 20px;
+}
+
+.user__btn {
+    font-size: 20px;
+    line-height: 120%;
+    padding: 10px 30px;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    border-radius: 5px;
 }
